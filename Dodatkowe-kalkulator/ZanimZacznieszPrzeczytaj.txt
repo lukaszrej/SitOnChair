@@ -1,0 +1,3 @@
+w tym folderze znajduje siê kod HTML do kalkulatora obliczaj¹cego cenê krzes³a.
+Byæ mo¿e przyda Ci siê ten kod, kiedy bêdziesz robi³/a dodatkowe funkcje do tego projektu.
+Zaczekaj jednak do wolnego tygodnia. 
