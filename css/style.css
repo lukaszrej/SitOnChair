@@ -303,7 +303,7 @@ textarea {
 
 
 .pricing {
-    background: #e6e6e6;
+    background: #f0f0f0;
     color: #a6a6a6;
     font-size: 1.6rem;
 }
@@ -357,7 +357,7 @@ textarea {
     height: 30px;
     left: 0;
     right: 0;
-    margin: auto; /* necessary */
+    margin: 0 auto; /* necessary */
     top: -13px;
     background-color: #c9c8d0;
 }
@@ -426,11 +426,12 @@ textarea {
 
 .pricing__col .circle sup {
     font-size: 1.6rem;
+    margin-bottom: 5px;
 }
 
 .pricing__col .button {
     font-size: 1.6rem;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .pricing__col--standard {
@@ -472,11 +473,13 @@ textarea {
     font-weight: 700;
 }
 
+.form {
+    color: #8c8c8c;
+}
 
 .form__col {
     width: 60%;
     font-size: 2.2rem;
-    color: #a6a6a6;
 }
 
 .form__col--small {
