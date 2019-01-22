@@ -389,12 +389,13 @@ textarea {
     background-color: #f2f2f2;
 }
 
-.pricing__col--txt div {
+.pricing__col--txt li {
     padding-top: 5px;
     padding-bottom: 5px;
+    list-style: none;
 }
 
-.pricing__col--txt div:nth-child(2n) {
+.pricing__col--txt li:nth-child(2n) {
     background-color: #ebebeb;
 }
 
