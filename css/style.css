@@ -647,3 +647,35 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 .footer__col--small a .twitter_img {
     background-image: url("../images/twitter.png");
 }
+
+/* animations */
+
+.focus-in {
+    -webkit-animation: focus-in 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in {
+    0% {
+        -webkit-filter: blur(8px);
+        filter: blur(8px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
