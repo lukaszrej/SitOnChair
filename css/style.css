@@ -51,6 +51,12 @@ textarea {
     font-size: 1.6rem;
 }
 
+@media screen and (max-width: 640px) {
+    .main-header .container--flex {
+        flex-direction: column;
+    }
+}
+
 .main-header a {
     color: #fff;
 }
@@ -142,7 +148,6 @@ textarea {
 .slider .container,
 .slider__el {
     height: 100%;
-    /*padding-top: 15px;*/
 }
 
 button i .fas {
@@ -182,7 +187,6 @@ button i .fas {
     background: var(--decor-color);
     color: #fff;
     font-size: 2.4rem;
-    /*margin: 20px 0;*/
     padding: 7px 30px;
     border-radius: 8px;
     transition: all .3s;
@@ -210,7 +214,6 @@ button i .fas {
     position: relative;
 }
 
-
 .offers .container {
     align-items: flex-start;
 }
@@ -227,7 +230,7 @@ button i .fas {
 .offers__col {
     width: 32%;
     font-size: 1.6rem;
-    max-height: 253px; /* just for protection */
+    max-height: 253px;
     overflow: hidden;
     position: relative;
     color: #a6a6a6;
