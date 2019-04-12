@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             activeSlide = slides.length - 1;
         }
 
-        slides[activeSlide].classList.add('visible');
+        slides[activeSlide].classList.add('visible', 'focus-in');
     });
 
     buttonNext.addEventListener('click', () => {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             activeSlide = 0;
         }
 
-        slides[activeSlide].classList.add('visible');
+        slides[activeSlide].classList.add('visible', 'focus-in');
     });
 
 
