@@ -39,6 +39,7 @@ textarea {
     justify-content: space-between;
 }
 
+
 .decor-text {
     color: var(--decor-color);
 }
@@ -650,6 +651,27 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 .footer__col--small a .twitter_img {
     background-image: url("../images/twitter.png");
 }
+
+@media screen and (max-width: 640px) {
+    .pricing .container--flex {
+        flex-direction: column;
+    }
+    .pricing__col {
+        width: 65%;
+    }
+    .container .container--flex {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .container .form__col {
+        width: 90%;
+    }
+    .container .form__col--small {
+        width: 90%;
+    }
+
+}
+
 
 .slides {
     display: none;
