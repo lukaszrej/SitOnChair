@@ -52,9 +52,14 @@ textarea {
     font-size: 1.6rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px), (max-width: 800px){
     .main-header .container--flex {
         flex-direction: column;
+    }
+    .main-header h1 {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 }
 
@@ -652,25 +657,65 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     background-image: url("../images/twitter.png");
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
     .pricing .container--flex {
         flex-direction: column;
     }
     .pricing__col {
-        width: 65%;
+        width: 70%;
     }
+
+    .pricing h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .form h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
     .container .container--flex {
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .container .form__col {
         width: 90%;
     }
     .container .form__col--small {
         width: 90%;
+        padding-left: 0;
+    }
+
+    .title--decor__sections:before {
+        content: "";
+        width: 60%;
+        height: 3px;
+        left: 20%;
+        background-color: var(--decor-color);
+        position: absolute;
+        bottom: -10px;
+    }
+
+    .spacing-y {
+        padding: 4rem 0 4rem;
     }
 
 }
+
+@media screen and (max-width: 640px) {
+    .pricing__col {
+        width: 80%;
+    }
+
+    /*.container .container--flex {*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-start;*/
+    /*}*/
+
+}
+
 
 
 .slides {
