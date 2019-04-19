@@ -703,17 +703,30 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         padding: 4rem 0 4rem;
     }
 
-    /*.offers .container--flex {*/
-        /*display: inline-grid;*/
-    /*}*/
+    .offers .container--flex {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    /*.offers .container--flex .offers__col {*/
+    .offers__col a .box1_img,
+    .offers__col a .box2_img {
+        background-position: center;
+    }
+    .offers .offers__col {
+        width: 90%;
+        border: none;
+        text-align: center;
+    }
 
-    /*}*/
-
-    /*.offers .container--flex .offers__col:nth-child(3) {*/
-    /*}*/
-
+    .title--decor:before {
+        content: "";
+        width: 60%;
+        height: 3px;
+        left: 20%;
+        background-color: var(--decor-color);
+        position: absolute;
+        bottom: -10px;
+    }
 
     .footer__col {
         width: 80%;
