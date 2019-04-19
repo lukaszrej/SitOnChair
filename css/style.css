@@ -12,7 +12,11 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 10px;
     text-align: left;
-    min-width: 400px;
+    /*min-width: 650px;*/
+}
+
+body {
+    min-width: 640px;
 }
 
 img {
@@ -659,6 +663,16 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 @media screen and (max-width: 800px) {
+    .slider {
+        background: linear-gradient(to bottom, #fff 40%, #c9c8d0);
+        height: calc(81vh - 51px);
+        font-size: 1.6rem;
+    }
+
+    .slider__nav--prev {
+        top: 54%;
+    }
+
     .pricing .container--flex {
         flex-direction: column;
     }
@@ -735,7 +749,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     }
 
     .footer__col--small {
-        width: 50%;
+        width: 55%;
         padding-left: 25px;
 
         display: flex;
@@ -746,7 +760,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     footer.container--flex {
         flex-direction: column-reverse;
     }
-
 }
 
 @media screen and (max-width: 640px) {
@@ -754,7 +767,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         width: 80%;
     }
 }
-
 
 
 .slides {
@@ -790,9 +802,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 
-/*.form {*/
-    /*margin-top:50px;*/
-/*}*/
 .drop_down_list {
     border:1px solid #8de0d2;
     width: 280px;
@@ -998,16 +1007,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 .title {
     height: 30px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* animations */
