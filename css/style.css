@@ -730,13 +730,17 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         width: 90%;
         border: none;
         text-align: center;
+        padding-top: 2rem;
+    }
+    .offers .offers__col:first-child {
+        padding-top: 0;
     }
 
     .title--decor:before {
         content: "";
-        width: 60%;
+        width: 50%;
         height: 3px;
-        left: 20%;
+        left: 25%;
         background-color: var(--decor-color);
         position: absolute;
         bottom: -10px;
@@ -793,14 +797,12 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     text-align: right;
 }
 
-
 .inline {
     display:inline-block;
     width:300px;
     padding:14px;
     vertical-align: top;
 }
-
 
 .drop_down_list {
     border:1px solid #8de0d2;
@@ -817,7 +819,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     color: #e2e2e2;
     font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
-
 
 .checkbox {
     position: relative;
@@ -863,7 +864,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     display: block;
 }
 
-
 .active {
     background: url('../images/form_ok.jpg');
     width: 48px;
@@ -882,7 +882,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     margin-top: 110px;
     margin-left: 38px;
 }
-
 
 .application .green_bell {
     background-color: #24baa0;
