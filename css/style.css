@@ -151,7 +151,7 @@ textarea {
 
 .slider {
     background: linear-gradient(to bottom, #fff 40%, #c9c8d0);
-    height: calc(61vh - 51px);
+    height: calc(70vh - 51px);
     font-size: 1.6rem;
     text-align: center;
 }
@@ -211,7 +211,7 @@ button i .fas {
 
 .slider__nav {
     position: absolute;
-    top: 33%;
+    top: 39%;
     transform: translateY(-50%);
     z-index: 2;
     background: none;
@@ -670,7 +670,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     }
 
     .slider__nav--prev {
-        top: 54%;
+        top: 53%;
     }
 
     .pricing .container--flex {
@@ -782,11 +782,12 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 
-/*dodatkowy moduł*/
+/* compose your chair */
 
 .application {
     background-color: #f9f9f9;
-    padding:30px 0;
+    padding-top: 30px;
+    padding-bottom: 80px;
 }
 .application h3 {
     color: #575757;

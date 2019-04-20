@@ -34,13 +34,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // offers section //
+    let offersCol = document.querySelectorAll('.offers__col');
+
+    for (let i=0; i<offersCol.length - 1; i++) {
+        let current = offersCol[i];
+
+        current.addEventListener('mouseenter', () => {
+            current.firstElementChild.nextElementSibling.style.display = "none";
+            current.firstElementChild.firstElementChild.style.transform = "scale(1.1)";
+            current.firstElementChild.firstElementChild.style.transition = "all .5s";
+        });
+
+        current.addEventListener('mouseleave', () => {
+            current.firstElementChild.nextElementSibling.style.display = "block";
+            current.firstElementChild.firstElementChild.style.transform = "scale(1.0)";
+            current.firstElementChild.firstElementChild.style.transition = "all .5s";
+        });
+    }
 
 });
-
-
-
-
-
-
-
-
