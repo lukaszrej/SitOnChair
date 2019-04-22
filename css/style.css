@@ -662,7 +662,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 
 /* Compose your chair */
 
-.application {
+.calculator {
     background-color: #f9f9f9;
     padding-top: 30px;
     padding-bottom: 80px;
@@ -672,12 +672,12 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     display: none;
 }
 
-.application h2 {
+.calculator h2 {
     color: #8b8b8b;
     font-size: 2.2rem;
 }
 
-.application header.align_right{
+.calculator header.align_right{
     text-align: right;
 }
 
@@ -688,7 +688,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     vertical-align: top;
 }
 
-.drop_down_list {
+.calculator__dropdown {
     border:1px solid #8de0d2;
     width: 280px;
     height:38px;
@@ -698,17 +698,17 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     position: relative;
 }
 
-.list_label {
+.calculator__label {
     font-size: 30px;
     color: #e2e2e2;
     font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
-.checkbox {
+.calculator__checkbox {
     position: relative;
     padding: 30px 30px 30px 0;
 }
-.checkbox input {
+.calculator__checkbox input {
     display: block;
     opacity: 0;
     height: 48px;
@@ -717,7 +717,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     cursor: pointer;
 }
 
-.checkbox label {
+.calculator__checkbox label {
     display: block;
     padding-left: 65px;
     position: relative;
@@ -728,7 +728,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     cursor: pointer;
 }
 
-.checkbox label::before, .checkbox label::after {
+.calculator__checkbox label::before, .calculator__checkbox label::after {
     border: 1px solid #27c7ab;
     content: "";
     display: block;
@@ -738,13 +738,13 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     width: 48px;
     top: 0;
 }
-.checkbox label::after {
+.calculator__checkbox label::after {
     background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
     border: 0;
     display: none;
 }
 
-.checkbox input:checked + label::after {
+.calculator__checkbox input:checked + label::after {
     display: block;
 }
 
@@ -762,12 +762,12 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     margin-left: 15px;
     color: #aeaeae;
 }
-.image_part img{
-    margin-top: 110px;
-    margin-left: 38px;
-}
+/*.calculator__image img{*/
+    /*margin-top: 110px;*/
+    /*margin-left: 38px;*/
+/*}*/
 
-.application .green_bell {
+.calculator .green_bell {
     background-color: #24baa0;
     width: 200px;
     height: 6px;
@@ -784,7 +784,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 
 }
 
-.application .green_button {
+.calculator .green_button {
     background-color: #27c7ab;
     color: white;
     text-align:center;
@@ -854,7 +854,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     color: #24baa0;
 }
 
-.list_arrow {
+.calculator__arrow {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -973,10 +973,10 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         bottom: -10px;
     }
 
-    .application .container--flex {
+    .calculator .container--flex {
         flex-direction: column;
     }
-    .application .container--flex > section:nth-child(2) {
+    .calculator .container--flex > section:nth-child(2) {
         display: none;
     }
 
