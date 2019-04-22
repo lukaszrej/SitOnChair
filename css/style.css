@@ -15,10 +15,6 @@ html {
     /*min-width: 650px;*/
 }
 
-body {
-    min-width: 640px;
-}
-
 img {
     max-width: 100%;
 }
@@ -770,6 +766,54 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     .pricing__col {
         width: 80%;
     }
+
+    .slider .container--flex {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .slider__col, .slider__col--small {
+        width: 90%;
+        padding-right: 0;
+    }
+
+    .slider .container .slider__col--small p {
+        display: none;
+    }
+
+    .slider__col--small h2 {
+        padding-bottom: 2rem;
+    }
+
+    .slider__nav--prev {
+        left: 1rem;
+    }
+    .slider__nav--next {
+        position: absolute;
+        top: 53%;
+        right: 1rem;
+    }
+
+    .slider__col figure {
+        padding-top: 2rem;
+    }
+
+    .slider__title {
+        font-size: 3.2rem;
+    }
+
+    .slider__nav {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pricing__col {
+        width: 70%;
+    }
+    /*.slider .container .slider__col--small {*/
+        /*display: none;*/
+    /*}*/
 }
 
 
@@ -780,6 +824,9 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 .visible {
     display: inline-block;
 }
+
+
+
 
 
 /* compose your chair */
