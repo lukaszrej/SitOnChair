@@ -836,9 +836,34 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     padding-top: 30px;
     padding-bottom: 80px;
 }
-.application h3 {
-    color: #575757;
-    font-size: 18px;
+
+
+
+@media screen and (max-width: 800px) {
+    .application .container--flex {
+        flex-direction: column;
+    }
+    .application .container--flex > section:nth-child(2) {
+        display: none;
+    }
+    /*.application header .align_right{*/
+        /*text-align: center;*/
+    /*}*/
+
+    footer .footer__col .container--flex {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    footer .footer__col--small {
+        padding-left: 0;
+        width: 90%;
+    }
+}
+
+.application h2 {
+    color: #8b8b8b;
+    font-size: 2.2rem;
 }
 
 .application header.align_right{
@@ -846,9 +871,9 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .inline {
-    display:inline-block;
-    width:300px;
-    padding:14px;
+    display: inline-block;
+    /*width: 300px;*/
+    /*padding: 14px;*/
     vertical-align: top;
 }
 
