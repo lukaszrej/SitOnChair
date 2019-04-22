@@ -13,7 +13,26 @@
 </head>
 <body>
 
+<!--<nav role="navigation">-->
+    <!--<div id="menuToggle">-->
+        <!--<input type="checkbox" />-->
 
+        <!--<span></span>-->
+        <!--<span></span>-->
+        <!--<span></span>-->
+
+        <!--<ul id="menu">-->
+            <!--<a href="#"><li>O Firmie</li></a>-->
+            <!--<ul class="nav-list nav-list&#45;&#45;sub">-->
+                <!--<li><a href="#">Aktualności</a></li>-->
+                <!--<li><a href="#">Nasz team</a></li>-->
+                <!--<li><a href="#">Historia</a></li>-->
+            <!--</ul>-->
+            <!--<a href="#"><li>Galeria</li></a>-->
+            <!--<a href="#"><li>Kontakt</li></a>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</nav>-->
 
 <!-- header -->
 <header class="main-header">
@@ -23,7 +42,7 @@
                 SIT <span class="decor-text">ON</span> CHAIR
             </a>
         </h1>
-        <nav class="main-header__nav">
+        <nav class="main-header__nav" role="navigation">
             <ul class="nav-list">
                 <li>
                     <a href="#">O Firmie</a>
@@ -37,10 +56,70 @@
                 <li><a href="#">Kontakt</a></li>
             </ul>
         </nav>
+
+        <nav class="main-header__mobileNav" role="navigation">
+            <ul class="nav-list">
+                <li>
+                    <a href="#">O Firmie</a>
+                    <ul class="nav-list nav-list--sub">
+                        <li><a href="#">Aktualności</a></li>
+                        <li><a href="#">Nasz team</a></li>
+                        <li><a href="#">Historia</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
     </div>
 </header>
 <!-- / header -->
 
+
+
+<!--sprzed zmian-->
+<!-- header -->
+<!--<header class="main-header">-->
+    <!--<div class="container container&#45;&#45;flex">-->
+        <!--<h1 class="main-header__logo">-->
+            <!--<a href="#">-->
+                <!--SIT <span class="decor-text">ON</span> CHAIR-->
+            <!--</a>-->
+        <!--</h1>-->
+        <!--<nav class="main-header__nav" role="navigation">-->
+            <!--<ul class="nav-list">-->
+                <!--<li>-->
+                    <!--<a href="#">O Firmie</a>-->
+                    <!--<ul class="nav-list nav-list&#45;&#45;sub">-->
+                        <!--<li><a href="#">Aktualności</a></li>-->
+                        <!--<li><a href="#">Nasz team</a></li>-->
+                        <!--<li><a href="#">Historia</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a href="#">Galeria</a></li>-->
+                <!--<li><a href="#">Kontakt</a></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+
+        <!--<nav class="main-header__mobileNav" role="navigation">-->
+            <!--<ul class="nav-list">-->
+                <!--<li>-->
+                    <!--<a href="#">O Firmie</a>-->
+                    <!--<ul class="nav-list nav-list&#45;&#45;sub">-->
+                        <!--<li><a href="#">Aktualności</a></li>-->
+                        <!--<li><a href="#">Nasz team</a></li>-->
+                        <!--<li><a href="#">Historia</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a href="#">Galeria</a></li>-->
+                <!--<li><a href="#">Kontakt</a></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+
+    <!--</div>-->
+<!--</header>-->
+<!-- / header -->
 
 <!-- slider -->
 <section class="slider">
@@ -306,7 +385,7 @@
     <div class="footer__col">
         <p>Copyright 2019 | All Rights Reserved - Sit On Chair</p>
     </div>
-    <div class="footer__col footer__col--small container--flex">
+    <div class="footer__col footer__col--small footer--flex">
         <div class="footer__col--small">
             <a href="#"><div class="flickr_img"></div></a>
             <a href="#"><div class="vimeo_img"></div></a>

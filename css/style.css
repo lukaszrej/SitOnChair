@@ -12,7 +12,6 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 10px;
     text-align: left;
-    /*min-width: 650px;*/
 }
 
 img {
@@ -20,7 +19,9 @@ img {
 }
 
 a {
+    color: #24ba9f;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 textarea {
@@ -51,17 +52,6 @@ textarea {
     color: white; /* when background image would be disabled */
     text-transform: uppercase;
     font-size: 1.6rem;
-}
-
-@media screen and (max-width: 640px), (max-width: 800px){
-    .main-header .container--flex {
-        flex-direction: column;
-    }
-    .main-header h1 {
-        font-size: 1.8rem;
-        padding-bottom: 1rem;
-        padding-top: 2rem;
-    }
 }
 
 .main-header a {
@@ -354,7 +344,6 @@ button i .fas {
     width: 100%;
     align-items: center;
 }
-
 
 .pricing__col:before,
 .pricing__col:after {
@@ -658,164 +647,9 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     background-image: url("../images/twitter.png");
 }
 
-@media screen and (max-width: 800px) {
-    .slider {
-        background: linear-gradient(to bottom, #fff 40%, #c9c8d0);
-        height: calc(81vh - 51px);
-        font-size: 1.6rem;
-    }
 
-    .slider__nav--prev {
-        top: 53%;
-    }
 
-    .pricing .container--flex {
-        flex-direction: column;
-    }
-    .pricing__col {
-        width: 70%;
-    }
-
-    .pricing h2 {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-
-    .form h2 {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-
-    .container .container--flex {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .container .form__col {
-        width: 80%;
-    }
-    .container .form__col--small {
-        width: 80%;
-        padding-left: 0;
-    }
-
-    .title--decor__sections:before {
-        content: "";
-        width: 60%;
-        height: 3px;
-        left: 20%;
-        background-color: var(--decor-color);
-        position: absolute;
-        bottom: -10px;
-    }
-
-    .spacing-y {
-        padding: 4rem 0 4rem;
-    }
-
-    .offers .container--flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .offers__col a .box1_img,
-    .offers__col a .box2_img {
-        background-position: center;
-    }
-    .offers .offers__col {
-        width: 90%;
-        border: none;
-        text-align: center;
-        padding-top: 2rem;
-    }
-    .offers .offers__col:first-child {
-        padding-top: 0;
-    }
-
-    .title--decor:before {
-        content: "";
-        width: 50%;
-        height: 3px;
-        left: 25%;
-        background-color: var(--decor-color);
-        position: absolute;
-        bottom: -10px;
-    }
-
-    .footer__col {
-        width: 80%;
-        padding-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer__col--small {
-        width: 55%;
-        padding-left: 25px;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    footer.container--flex {
-        flex-direction: column-reverse;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .pricing__col {
-        width: 80%;
-    }
-
-    .slider .container--flex {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .slider__col, .slider__col--small {
-        width: 90%;
-        padding-right: 0;
-    }
-
-    .slider .container .slider__col--small p {
-        display: none;
-    }
-
-    .slider__col--small h2 {
-        padding-bottom: 2rem;
-    }
-
-    .slider__nav--prev {
-        left: 1rem;
-    }
-    .slider__nav--next {
-        position: absolute;
-        top: 53%;
-        right: 1rem;
-    }
-
-    .slider__col figure {
-        padding-top: 2rem;
-    }
-
-    .slider__title {
-        font-size: 3.2rem;
-    }
-
-    .slider__nav {
-        font-size: 8rem;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .pricing__col {
-        width: 70%;
-    }
-    /*.slider .container .slider__col--small {*/
-        /*display: none;*/
-    /*}*/
-}
-
+/* JavaScript part*/
 
 .slides {
     display: none;
@@ -826,10 +660,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 
-
-
-
-/* compose your chair */
+/* Compose your chair */
 
 .application {
     background-color: #f9f9f9;
@@ -837,28 +668,8 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     padding-bottom: 80px;
 }
 
-
-
-@media screen and (max-width: 800px) {
-    .application .container--flex {
-        flex-direction: column;
-    }
-    .application .container--flex > section:nth-child(2) {
-        display: none;
-    }
-    /*.application header .align_right{*/
-        /*text-align: center;*/
-    /*}*/
-
-    footer .footer__col .container--flex {
-        flex-direction: row;
-        width: 90%;
-    }
-
-    footer .footer__col--small {
-        padding-left: 0;
-        width: 90%;
-    }
+.main-header__mobileNav {
+    display: none;
 }
 
 .application h2 {
@@ -1081,6 +892,186 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 
+/* Media queries */
+
+@media screen and (max-width: 800px) {
+    .slider {
+        background: linear-gradient(to bottom, #fff 40%, #c9c8d0);
+        height: calc(81vh - 51px);
+        font-size: 1.6rem;
+    }
+
+    .slider__nav--prev {
+        top: 53%;
+    }
+
+    .pricing .container--flex {
+        flex-direction: column;
+    }
+    .pricing__col {
+        width: 70%;
+    }
+
+    .pricing h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .form h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .container .form__col {
+        width: 80%;
+    }
+    .container .form__col--small {
+        width: 80%;
+        padding-left: 0;
+    }
+
+    .title--decor__sections:before {
+        content: "";
+        width: 60%;
+        height: 3px;
+        left: 20%;
+        background-color: var(--decor-color);
+        position: absolute;
+        bottom: -10px;
+    }
+
+    .spacing-y {
+        padding: 4rem 0 4rem;
+    }
+
+    .offers .container--flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offers__col a .box1_img,
+    .offers__col a .box2_img {
+        background-position: center;
+    }
+    .offers .offers__col {
+        width: 90%;
+        border: none;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .offers .offers__col:first-child {
+        padding-top: 0;
+    }
+
+    .title--decor:before {
+        content: "";
+        width: 50%;
+        height: 3px;
+        left: 25%;
+        background-color: var(--decor-color);
+        position: absolute;
+        bottom: -10px;
+    }
+
+    .application .container--flex {
+        flex-direction: column;
+    }
+    .application .container--flex > section:nth-child(2) {
+        display: none;
+    }
+
+    .main-header__nav {
+        display: none;
+    }
+
+    .container .container--flex {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .footer__col {
+        width: 100%;
+        padding-bottom: 40px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .footer__col--small {
+        padding-left: 0;
+    }
+
+    footer.container--flex {
+        flex-direction: column-reverse;
+    }
+
+    footer .footer--flex {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .footer__col--small a .flickr_img,
+    .footer__col--small a .vimeo_img,
+    .footer__col--small a .pinterest_img,
+    .footer__col--small a .twitter_img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .pricing__col {
+        width: 80%;
+    }
+
+    .slider .container--flex {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .slider__col, .slider__col--small {
+        width: 90%;
+        padding-right: 0;
+    }
+
+    .slider .container .slider__col--small p {
+        display: none;
+    }
+
+    .slider__col--small h2 {
+        padding-bottom: 2rem;
+    }
+
+    .slider__nav--prev {
+        left: 1rem;
+    }
+    .slider__nav--next {
+        position: absolute;
+        top: 53%;
+        right: 1rem;
+    }
+
+    .slider__col figure {
+        padding-top: 2rem;
+    }
+
+    .slider__title {
+        font-size: 3.2rem;
+    }
+
+    .slider__nav {
+        font-size: 8rem;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .pricing__col {
+        width: 70%;
+    }
+}
+
+
 /* animations */
 
 .focus-in {
@@ -1111,4 +1102,149 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         filter: blur(0px);
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 640px), (max-width: 800px){
+    .main-header .container--flex {
+        flex-direction: column;
+    }
+    .main-header h1 {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+}
+
+
+
+/*NAV */
+
+#menuToggle
+{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+
+#menuToggle input
+{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+    transform: none;
 }
