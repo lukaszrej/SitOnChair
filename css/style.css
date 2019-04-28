@@ -689,11 +689,9 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .calculator__dropdown {
-    border:1px solid #8de0d2;
-    width: 280px;
-    height:38px;
+    border: 1px solid #8de0d2;
     background-color: white;
-    margin-top:22px;
+    margin-top: 22px;
     padding: 8px 12px;
     position: relative;
 }
