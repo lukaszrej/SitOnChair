@@ -782,7 +782,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     height:195px;
     padding:10px;
     margin-top: 50px;
-
 }
 
 .calculator .green_button {
@@ -872,7 +871,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 .list_panel {
     background-color: white;
     border: 1px solid #ccc;
-    width: 288px;
+    width: 100%;
     padding-left: 15px;
     padding-bottom: 10px;
     list-style: none;

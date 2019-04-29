@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // offers section //
-    let offersCol = document.querySelectorAll('.offers__col');
+    const offersCol = document.querySelectorAll('.offers__col');
 
-    for (let i=0; i<offersCol.length - 1; i++) {
+    for (let i = 0; i < offersCol.length - 1; i++) {
         let current = offersCol[i];
 
         current.addEventListener('mouseenter', () => {
@@ -51,6 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
             current.firstElementChild.firstElementChild.style.transform = "scale(1.0)";
             current.firstElementChild.firstElementChild.style.transition = "all .5s";
         });
+    }
+
+    // calculator //
+    const calculatorButton = document.querySelectorAll('.calculator__arrow');
+
+    for (let i = 0; i < calculatorButton.length; i++) {
+
+        calculatorButton[i].addEventListener('click', () => {
+            if (calculatorButton[i].nextElementSibling.style.display === "block") {
+                calculatorButton[i].nextElementSibling.style.display = "none";
+            } else {
+                calculatorButton[i].nextElementSibling.style.display = "block";
+            }
+        })
     }
 
 });
