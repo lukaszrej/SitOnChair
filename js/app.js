@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 calculatorButton[i].nextElementSibling.style.display = "block";
             }
+
+            let lis = calculatorButton[i].nextElementSibling.children;
+
+            for (let i=0; i<lis.length; i++) {
+                lis[i].addEventListener('click', (e) => {
+                    console.log(e.target.innerText);
+                });
+            }
         })
     }
 
