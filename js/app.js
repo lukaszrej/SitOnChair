@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // slider //
+    // SLIDER //
     const buttonPrev = document.querySelector('.slider__nav--prev');
     const buttonNext = document.querySelector('.slider__nav--next');
     const slides = document.querySelectorAll('.container .slides');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // offers section //
+    // OFFERS //
     const offersCol = document.querySelectorAll('.offers__col');
 
     for (let i = 0; i < offersCol.length - 1; i++) {
@@ -53,46 +53,72 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // calculator //
-    const calculatorButton = document.querySelectorAll('.calculator__arrow');
+    // CALCULATOR //
+
+    // variables - elements
+    const calculatorArrow = document.querySelectorAll('.calculator__arrow');
+    const chairTitle = document.querySelector('.panel_left .title');
+    const chairTypeTitle = document.querySelector('.panel_right .title');
+    const chairColorTitle = document.querySelector('.panel_right .color');
+
+    // variables - prices
     let priceClair = 149;
     let priceMargarita = 189;
     let priceSelena = 249;
+    let priceColor = 0;
 
-    let chairTitle = document.querySelector('.panel_left .title');
-    console.log(chairTitle);
+    // wybierz rodzaj
+    calculatorArrow[0].addEventListener('click', () => {
+        if (calculatorArrow[0].nextElementSibling.style.display === "block") {
+            calculatorArrow[0].nextElementSibling.style.display = "none";
+        } else {
+            calculatorArrow[0].nextElementSibling.style.display = "block";
+        }
 
-    for (let i = 0; i < calculatorButton.length; i++) {
+        let lis = calculatorArrow[0].nextElementSibling.children;
 
-        calculatorButton[i].addEventListener('click', () => {
-            if (calculatorButton[i].nextElementSibling.style.display === "block") {
-                calculatorButton[i].nextElementSibling.style.display = "none";
-            } else {
-                calculatorButton[i].nextElementSibling.style.display = "block";
-            }
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('click', (e) => {
 
-            let lis = calculatorButton[i].nextElementSibling.children;
+                if (e.target.innerText === "Clair") {
+                    chairTitle.innerHTML = "Clair";
+                    chairTypeTitle.innerHTML = priceClair + " " + "zł";
+                    e.target.parentElement.style = "none";
 
-            for (let i=0; i<lis.length; i++) {
-                lis[i].addEventListener('click', (e) => {
+                } else if (e.target.innerText === "Margarita") {
+                    chairTitle.innerHTML = "Margarita";
+                    chairTypeTitle.innerHTML = priceMargarita + " " + "zł";
+                    e.target.parentElement.style = "none";
 
-                    if (e.target.innerText === "Clair") {
-                        chairTitle.innerHTML = "Clair";
-                        console.log(priceClair, "price clair");
-                        console.log(e.target.innerText);
-                    } else if (e.target.innerText === "Margarita") {
-                        chairTitle.innerHTML = "Margarita";
-                        console.log(priceMargarita, "price margarita");
-                    } else {
-                        chairTitle.innerHTML = "Selena";
-                        console.log(priceSelena, "price selena");
-                    }
+                } else {
+                    chairTitle.innerHTML = "Selena";
+                    chairTypeTitle.innerHTML = priceSelena + " " + "zł";
+                    e.target.parentElement.style = "none";
 
-                });
-            }
+                }
+            });
+        }
+    });
 
+    // wybierz kolor
+    calculatorArrow[1].addEventListener('click', () => {
+        if (calculatorArrow[1].nextElementSibling.style.display === "block") {
+            calculatorArrow[1].nextElementSibling.style.display = "none";
+        } else {
+            calculatorArrow[1].nextElementSibling.style.display = "block";
+        }
 
-        })
-    }
+    });
+
+    // wybierz materiał
+    calculatorArrow[2].addEventListener('click', () => {
+        if (calculatorArrow[2].nextElementSibling.style.display === "block") {
+            calculatorArrow[2].nextElementSibling.style.display = "none";
+        } else {
+            calculatorArrow[2].nextElementSibling.style.display = "block";
+        }
+
+    });
+
 
 });
