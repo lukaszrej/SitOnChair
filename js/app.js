@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // calculator //
     const calculatorButton = document.querySelectorAll('.calculator__arrow');
+    let priceClair = 149;
+    let priceMargarita = 189;
+    let priceSelena = 249;
+
+    let chairTitle = document.querySelector('.panel_left .title');
+    console.log(chairTitle);
 
     for (let i = 0; i < calculatorButton.length; i++) {
 
@@ -69,9 +75,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
             for (let i=0; i<lis.length; i++) {
                 lis[i].addEventListener('click', (e) => {
-                    console.log(e.target.innerText);
+
+                    if (e.target.innerText === "Clair") {
+                        chairTitle.innerHTML = "Clair";
+                        console.log(priceClair, "price clair");
+                        console.log(e.target.innerText);
+                    } else if (e.target.innerText === "Margarita") {
+                        chairTitle.innerHTML = "Margarita";
+                        console.log(priceMargarita, "price margarita");
+                    } else {
+                        chairTitle.innerHTML = "Selena";
+                        console.log(priceSelena, "price selena");
+                    }
+
                 });
             }
+
+
         })
     }
 
