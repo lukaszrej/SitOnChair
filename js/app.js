@@ -57,15 +57,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // variables - elements
     const calculatorArrow = document.querySelectorAll('.calculator__arrow');
+    let chairTypesSelection = calculatorArrow[0].nextElementSibling.children;
+    let chairColorSelection = calculatorArrow[1].nextElementSibling.children;
+    let chairMaterialSelection = calculatorArrow[2].nextElementSibling.children;
+
     const chairTitle = document.querySelector('.panel_left .title');
     const chairTypeTitle = document.querySelector('.panel_right .title');
-    const chairColorTitle = document.querySelector('.panel_right .color');
+    const chairColorTitle = document.querySelector('.panel_left .color');
+    const chairColorPrice = document.querySelector('.panel_right .color');
+    const chairMaterialTitle = document.querySelector('.panel_left .pattern');
+    const chairMaterialPrice = document.querySelector('.panel_right .pattern');
 
     // variables - prices
     let priceClair = 149;
     let priceMargarita = 189;
     let priceSelena = 249;
     let priceColor = 0;
+    let priceMaterialFabric = 49;
+    let priceMaterialLether = 199;
 
     // wybierz rodzaj
     calculatorArrow[0].addEventListener('click', () => {
@@ -75,11 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
             calculatorArrow[0].nextElementSibling.style.display = "block";
         }
 
-        let lis = calculatorArrow[0].nextElementSibling.children;
-
-        for (let i = 0; i < lis.length; i++) {
-            lis[i].addEventListener('click', (e) => {
-
+        for (let i = 0; i < chairTypesSelection.length; i++) {
+            chairTypesSelection[i].addEventListener('click', (e) => {
                 if (e.target.innerText === "Clair") {
                     chairTitle.innerHTML = "Clair";
                     chairTypeTitle.innerHTML = priceClair + " " + "zł";
@@ -94,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     chairTitle.innerHTML = "Selena";
                     chairTypeTitle.innerHTML = priceSelena + " " + "zł";
                     e.target.parentElement.style = "none";
-
                 }
             });
         }
@@ -108,6 +113,25 @@ document.addEventListener('DOMContentLoaded', function () {
             calculatorArrow[1].nextElementSibling.style.display = "block";
         }
 
+        for (let i = 0; i < chairColorSelection.length; i++) {
+            chairColorSelection[i].addEventListener('click', (e) => {
+                if (e.target.innerText === "Czerwony") {
+                    chairColorTitle.innerHTML = "Czerwony";
+                    chairColorPrice.innerHTML = priceColor + " " + "zł";
+                    e.target.parentElement.style = "none";
+
+                } else if (e.target.innerText === "Czarny") {
+                    chairColorTitle.innerHTML = "Czarny";
+                    chairColorPrice.innerHTML = priceColor + " " + "zł";
+                    e.target.parentElement.style = "none";
+
+                } else {
+                    chairColorTitle.innerHTML = "Pomarańczowy";
+                    chairColorPrice.innerHTML = priceColor + " " + "zł";
+                    e.target.parentElement.style = "none";
+                }
+            });
+        }
     });
 
     // wybierz materiał
@@ -117,8 +141,31 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             calculatorArrow[2].nextElementSibling.style.display = "block";
         }
-
     });
 
+    for (let i = 0; i < chairMaterialSelection.length; i++) {
+        chairMaterialSelection[i].addEventListener('click', (e) => {
+            if (e.target.innerText === "Tkanina") {
+                chairMaterialTitle.innerHTML = "Tkanina";
+                chairMaterialPrice.innerHTML = priceMaterialFabric + " " + "zł";
+                e.target.parentElement.style = "none";
+
+            } else {
+                chairMaterialTitle.innerHTML = "Skóra";
+                chairMaterialPrice.innerHTML = priceMaterialLether + " " + "zł";
+                e.target.parentElement.style = "none";
+            }
+        });
+    }
+
+    // transport
+    const transport = document.querySelector('#transport');
+
+    transport.addEventListener('click', (e) => {
+        console.log(e.currentTarget);
+        e.currentTarget.classList.toggle('active');
+    });
+
+    console.log(transport);
 
 });
