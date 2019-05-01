@@ -53,11 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
     // CALCULATOR //
 
     // variables - elements
     const calculatorArrow = document.querySelectorAll('.calculator__arrow');
     let chairTypesSelection = calculatorArrow[0].nextElementSibling.children;
+    let chairSelectionTitles = document.querySelectorAll('.calculator__label');
+    let chairTypeSelectionTitle = chairSelectionTitles[0];
+    let chairColorSelectionTitle = chairSelectionTitles[1];
+    let chairMaterialSelectionTitle = chairSelectionTitles[2];
     let chairColorSelection = calculatorArrow[1].nextElementSibling.children;
     let chairMaterialSelection = calculatorArrow[2].nextElementSibling.children;
 
@@ -67,7 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const chairColorPrice = document.querySelector('.panel_right .color');
     const chairMaterialTitle = document.querySelector('.panel_left .pattern');
     const chairMaterialPrice = document.querySelector('.panel_right .pattern');
+    const transportTitle = document.querySelector('.panel_left .transport');
     const transportPrice = document.querySelector('.panel_right .transport');
+    const transport = document.querySelector('#transport');
+    const sum = document.querySelector('.sum strong');
 
     // variables - prices
     let priceClair = 149;
@@ -77,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let priceMaterialFabric = 49;
     let priceMaterialLether = 199;
     let priceTransport = 69;
+    let priceOutput = 0;
 
     // wybierz rodzaj
     calculatorArrow[0].addEventListener('click', () => {
@@ -90,21 +99,31 @@ document.addEventListener('DOMContentLoaded', function () {
             chairTypesSelection[i].addEventListener('click', (e) => {
                 if (e.target.innerText === "Clair") {
                     chairTitle.innerText = "Clair";
+                    chairTypeSelectionTitle.innerText = "Clair";
                     chairTypeTitle.innerText = priceClair + " " + "zł";
+                    priceOutput = priceClair;
                     e.target.parentElement.style = "none";
 
                 } else if (e.target.innerText === "Margarita") {
                     chairTitle.innerText = "Margarita";
+                    chairTypeSelectionTitle.innerText = "Margarita";
                     chairTypeTitle.innerText = priceMargarita + " " + "zł";
+                    priceOutput = priceMargarita;
                     e.target.parentElement.style = "none";
 
                 } else {
                     chairTitle.innerText = "Selena";
+                    chairTypeSelectionTitle.innerText = "Selena";
                     chairTypeTitle.innerText = priceSelena + " " + "zł";
+                    priceOutput = priceSelena;
                     e.target.parentElement.style = "none";
                 }
+
+                sum.innerText = priceOutput + " " + "zł";
+
             });
         }
+
     });
 
     // wybierz kolor
@@ -119,16 +138,19 @@ document.addEventListener('DOMContentLoaded', function () {
             chairColorSelection[i].addEventListener('click', (e) => {
                 if (e.target.innerText === "Czerwony") {
                     chairColorTitle.innerText = "Czerwony";
+                    chairColorSelectionTitle.innerText = "Czerwony";
                     chairColorPrice.innerText = priceColor + " " + "zł";
                     e.target.parentElement.style = "none";
 
                 } else if (e.target.innerText === "Czarny") {
                     chairColorTitle.innerText = "Czarny";
+                    chairColorSelectionTitle.innerText = "Czarny";
                     chairColorPrice.innerText = priceColor + " " + "zł";
                     e.target.parentElement.style = "none";
 
                 } else {
                     chairColorTitle.innerText = "Pomarańczowy";
+                    chairColorSelectionTitle.innerText = "Pomarańczowy";
                     chairColorPrice.innerText = priceColor + " " + "zł";
                     e.target.parentElement.style = "none";
                 }
@@ -149,26 +171,38 @@ document.addEventListener('DOMContentLoaded', function () {
         chairMaterialSelection[i].addEventListener('click', (e) => {
             if (e.target.innerText === "Tkanina") {
                 chairMaterialTitle.innerText = "Tkanina";
+                chairMaterialSelectionTitle.innerText = "Tkanina";
+                priceOutput += priceMaterialFabric;
                 chairMaterialPrice.innerText = priceMaterialFabric + " " + "zł";
                 e.target.parentElement.style = "none";
 
             } else {
                 chairMaterialTitle.innerText = "Skóra";
+                chairMaterialSelectionTitle.innerText = "Skóra";
+                priceOutput += priceMaterialFabric;
                 chairMaterialPrice.innerText = priceMaterialLether + " " + "zł";
                 e.target.parentElement.style = "none";
             }
+
+            sum.innerText = priceOutput + " " + "zł";
         });
     }
 
-    // transport
-    const transport = document.querySelector('#transport');
-
+    // wybierz transport
     transport.addEventListener('click', (e) => {
         e.target.classList.toggle('active');
 
         if (e.target.classList.value === "active") {
+            transportTitle.innerText = "Transport";
+            priceOutput += priceTransport;
             transportPrice.innerText = priceTransport + " " + "zł";
+        } else {
+            transportTitle.innerText = "Odbiór osobisty";
+            priceOutput += priceTransport;
+            transportPrice.innerText = 0 + " " + "zł";
         }
+
+        sum.innerText = priceOutput + " " + "zł";
     });
 
 
