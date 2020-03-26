@@ -903,10 +903,6 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
         font-size: 1.6rem;
     }
 
-    .slider__nav--prev {
-        top: 53%;
-    }
-
     .pricing .container--flex {
         flex-direction: column;
     }
@@ -1039,7 +1035,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
 
     .slider .container--flex {
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-evenly;
     }
 
     .slider__col, .slider__col--small {
@@ -1060,12 +1056,8 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     }
     .slider__nav--next {
         position: absolute;
-        top: 53%;
+        top: 39%;
         right: 1rem;
-    }
-
-    .slider__col figure {
-        padding-top: 3.2rem;
     }
 
     .slider__title {
@@ -1123,7 +1115,7 @@ input:focus::-ms-input-placeholder { /* Microsoft Edge */
     }
     .main-header h1 {
         font-size: 1.8rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         padding-top: 2rem;
     }
 }
